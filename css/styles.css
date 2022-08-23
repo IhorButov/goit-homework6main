@@ -534,10 +534,7 @@ html {
 }
 /* --- Присоединяйтесь ---*/
 .join {
-  width: 206px;
-  height: 80px;
-  margin-right: 93px;
-  display: block;
+  margin-right: auto;
 }
 .join-title {
   margin-bottom: 20px;
@@ -685,7 +682,6 @@ html {
 }
 .modal-footer {
   display: block;
-  margin-right: auto;
 }
 .footer-email {
   width: 358px;
@@ -792,6 +788,7 @@ html {
   transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
 }
+
 .section-hero .input-name {
   text-align: left;
 }
@@ -806,7 +803,6 @@ html {
 
 .comment-text {
   padding: 12px 16px;
-  margin-bottom: 20px;
   resize: none;
   width: 100%;
   height: 120px;
@@ -895,6 +891,10 @@ html {
 .modal-input {
   margin-bottom: 10px;
 }
+.modal-input:last-child {
+  margin-bottom: 20px;
+}
+
 .modal-input-policy {
   display: flex;
   justify-content: center;
@@ -929,4 +929,39 @@ html {
 }
 .policy-input-main:checked + .policy-text-main .input-icon-main {
   fill: var(--second-icon-color);
+}
+.policy-text-second {
+  display: flex;
+  font-size: 14px;
+  color: gray;
+  align-items: center;
+  position: relative;
+}
+.policy-text-second::before {
+  content: "";
+  width: 40px;
+  height: 22px;
+  border: 1px solid blue;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+.policy-text-second::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid blue;
+  background-color: rgb(255, 102, 0);
+  border-radius: 50%;
+  margin-left: 0;
+  transition: transform 300ms linear;
+}
+.policy-input-todo:checked + .policy-text-second::after {
+  transform: translate(20px);
+  background-color: rgb(21, 255, 0);
+}
+.policy-input-todo:checked + .policy-text-second::before {
+  background-color: yellow;
 }
