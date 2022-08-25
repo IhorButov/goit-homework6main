@@ -412,7 +412,7 @@ html {
   display: flex;
 }
 .team-list .team-title {
-  width: ((100% - 90px)/4);
+  width: 151px; /* cacl ((100% - 90px) / 4);*/
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -628,7 +628,7 @@ html {
   border-top: 0;
 }
 .portfolio-item {
-  width: cacl ((100% - 60px)/3);
+  width: 370px; /*cacl ((100% - 60px)/3);*/
 }
 
 .portfolio-link {
